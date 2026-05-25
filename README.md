@@ -10,6 +10,7 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 - Ashes of The Domain 계열
 - Arma Armatura
 - Ashes of The Domain - Dreams of Past
+- MagicLib 현상금/위치 문구 일부
 
 설치된 모드만 자동으로 감지해서 번역합니다. 예를 들어 Nexerelin만 있으면 Nexerelin 관련 번역만 적용되고, 여러 모드가 있으면 설치된 모드 번역이 함께 적용됩니다.
 
@@ -38,6 +39,8 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 6. `KoreanModTranslations\install_mod_translations.bat` 실행
 
 AoTD Theory의 `0.98a\starfarer.api.jar` 요구사항은 installer가 자동으로 보정합니다.
+
+이번 빌드는 core/AoTD API JAR의 개인 현상금 및 루드의 길 술집 이벤트 하드코딩 문구, Arma Armatura의 `armaa.jar` 하드코딩 문구, MagicLib 현상금 위치 문구를 추가로 보정합니다.
 
 ## 삭제/원복
 
