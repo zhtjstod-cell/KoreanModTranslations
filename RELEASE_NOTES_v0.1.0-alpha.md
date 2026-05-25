@@ -32,11 +32,20 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 - 실행 파일: `KoreanModTranslations\kmt_manager.bat`
 - Starsector 폴더 선택
 - 감지된 원본 모드 수와 core/API JAR 상태 표시
+- 바닐라 core/API JAR 감지 시 `mods\KoreanPatch` 설치기 자동 실행
 - AoTD Theory API JAR 자동 동기화
+- 번역 목록에 없는 미지원 모드 JAR 호환성 검사
 - 지원 모드 번역 설치/보정
 - 크래시 진단 및 수리 실행
 - 원복/삭제 실행
 - 리포트 폴더 열기
+
+미지원 모드는 KMT가 직접 패치하지 않습니다. 대신 매니저와 installer가 미지원 모드 JAR을 스캔해 다음 충돌 후보를 `reports\external_jar_compatibility_report.json`에 기록합니다.
+
+- 미지원 모드 폴더 안의 `starfarer.api.jar` 또는 `starfarer_obf.jar` 복사본
+- KMT가 패치하는 class path와 같은 class를 포함한 미지원 JAR
+
+충돌 후보가 있어도 KMT는 해당 미지원 JAR을 억지로 수정하지 않고, GUI와 리포트에 표시해 설치 순서/호환성 확인 대상으로 남깁니다.
 
 Ashes of The Domain - Theory of Toolbox는 `0.98a\starfarer.api.jar`를 core API JAR 기준으로 요구합니다. KMT installer는 AoTD Theory가 설치되어 있고 두 API JAR이 서로 다르면 AoTD API JAR을 `starsector-core\starfarer.api.jar`에 먼저 동기화한 뒤, KMT JAR 번역 패치를 다시 적용합니다.
 
@@ -67,6 +76,7 @@ AoTD Theory의 `0.98a\starfarer.api.jar` 요구사항은 5단계에서 installer
 `install_mod_translations.bat`는 시작할 때 core/API JAR 상태를 검사합니다.
 
 - 완전 바닐라 core/API JAR가 감지되면 설치를 중단하고 기본 한글패치 BAT 실행을 안내합니다.
+- 단, `mods\KoreanPatch`가 있으면 KMT installer가 기본 한글패치 설치기를 자동으로 실행한 뒤 계속 진행합니다.
 - AoTD Theory API JAR 불일치가 감지되면 `0.98a\starfarer.api.jar`를 core API JAR에 자동 동기화한 뒤 진행합니다.
 - KMT가 알고 있는 패치 상태면 그대로 진행합니다.
 - 알 수 없는 수정 JAR이면 경고와 `reports\preflight_report.json`을 남기고 진행합니다.

@@ -31,7 +31,9 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 
 - 현재 Starsector 폴더와 감지된 모드 수를 표시합니다.
 - core/API JAR이 바닐라인지, 수정된 상태인지 검사합니다.
+- core/API JAR이 바닐라이고 `mods\KoreanPatch`가 있으면 기본 한글패치 설치기를 자동으로 실행합니다.
 - AoTD Theory의 `0.98a\starfarer.api.jar` 요구사항을 자동 보정합니다.
+- 번역 목록에 없는 미지원 모드의 JAR도 검사해 core/API JAR 복사본이나 KMT 패치 class와 겹치는 충돌 후보를 리포트합니다.
 - 지원 모드 번역 설치, 크래시 진단, 크래시 수리, 원복을 버튼으로 실행합니다.
 - 작업 결과와 리포트 위치를 화면에서 확인할 수 있습니다.
 
@@ -39,7 +41,9 @@ Ashes of The Domain - Theory of Toolbox를 사용하는 경우, 설치기가 `0.
 
 다른 모드나 패치가 `starsector-core`의 JAR 파일을 수정한다면, 그 패치들을 먼저 적용한 뒤 이 모드의 설치 BAT를 마지막에 실행하세요. 설치기는 현재 JAR을 기준으로 원문이 정확히 일치하는 문자열만 추가 패치하고, 일치하지 않는 항목은 건너뜁니다.
 
-설치기는 시작할 때 core/API JAR 상태를 검사합니다. AoTD Theory API JAR 불일치는 자동 보정하고, 완전 바닐라 JAR가 감지되면 기본 한글패치 BAT를 먼저 실행하라고 중단합니다. 이미 수정된 JAR는 경고/리포트만 남기고 진행하며, 현재 파일에 정확히 맞는 문자열만 패치합니다.
+설치기는 시작할 때 core/API JAR 상태를 검사합니다. 완전 바닐라 JAR가 감지되고 `mods\KoreanPatch`가 있으면 KMT가 기본 한글패치 설치기를 자동으로 실행합니다. 그 다음 AoTD Theory API JAR 불일치를 자동 보정하고 KMT 번역을 적용합니다. KoreanPatch 폴더 자체가 없을 때만 진행을 중단합니다.
+
+번역 목록에 없는 미지원 모드는 KMT가 직접 수정하지 않습니다. 대신 매니저와 설치기가 미지원 모드의 JAR을 검사해 충돌 후보를 `reports\external_jar_compatibility_report.json`에 기록합니다. 미지원 모드가 core/API JAR 복사본을 포함하거나 KMT가 패치하는 class와 겹치면 GUI에 주의로 표시됩니다.
 
 ## 삭제/원복
 
