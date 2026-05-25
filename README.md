@@ -20,8 +20,20 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
    - Ashes of The Domain 등 일부 모드는 기본 한글패치 BAT가 자동 적용하는 Starsector API JAR 패치가 필요합니다.
 2. Nexerelin, Ashes of The Domain, Arma Armatura 등 사용할 원본 모드를 평소처럼 `mods` 폴더에 설치합니다.
 3. 이 폴더 `KoreanModTranslations`를 Starsector의 `mods` 폴더에 넣습니다.
-4. `install_mod_translations.bat`를 실행합니다.
+4. `kmt_manager.bat`를 실행하고 `자동 설치/보정`을 누릅니다.
 5. 게임 런처에서 `Korean Mod Translations`를 활성화합니다.
+
+기존 방식이 필요하면 `install_mod_translations.bat`를 직접 실행해도 됩니다. 다만 일반 배포판에서는 `kmt_manager.bat` 사용을 권장합니다.
+
+## KMT Manager
+
+`kmt_manager.bat`는 별도 설치 없이 실행되는 간단한 GUI 매니저입니다.
+
+- 현재 Starsector 폴더와 감지된 모드 수를 표시합니다.
+- core/API JAR이 바닐라인지, 수정된 상태인지 검사합니다.
+- AoTD Theory의 `0.98a\starfarer.api.jar` 요구사항을 자동 보정합니다.
+- 지원 모드 번역 설치, 크래시 진단, 크래시 수리, 원복을 버튼으로 실행합니다.
+- 작업 결과와 리포트 위치를 화면에서 확인할 수 있습니다.
 
 Ashes of The Domain - Theory of Toolbox를 사용하는 경우, 설치기가 `0.98a\starfarer.api.jar`와 `starsector-core\starfarer.api.jar` 상태를 비교합니다. 서로 다르면 AoTD가 요구하는 API JAR을 core 쪽에 먼저 맞춘 뒤, 그 위에 KMT JAR 번역 패치를 다시 적용합니다.
 
@@ -38,6 +50,8 @@ Ashes of The Domain - Theory of Toolbox를 사용하는 경우, 설치기가 `0.
 ## 크래시 진단/자가 수리
 
 게임이 크래시난 뒤 `diagnose_crash_and_repair.bat`를 실행하면 최신 `starsector.log`를 읽고 알려진 크래시 패턴을 진단합니다.
+
+GUI를 쓰는 경우 `kmt_manager.bat`에서 `크래시 진단` 또는 `크래시 수리 실행` 버튼을 누르면 됩니다.
 
 기본 실행은 리포트만 작성합니다. 실제 수리를 적용하려면 명령 프롬프트에서 다음처럼 실행하세요.
 

@@ -20,8 +20,23 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 3. Starsector API JAR, `starsector-core` JAR, 또는 원본 모드 JAR을 덮어쓰는 다른 패치/모드가 있다면 적용합니다.
 4. 다른 패치가 core/API JAR을 통째로 덮어썼다면 기본 한글패치 BAT를 다시 실행합니다.
 5. 릴리즈 ZIP을 풀어 `KoreanModTranslations` 폴더를 Starsector `mods` 폴더에 넣습니다.
-6. `KoreanModTranslations\install_mod_translations.bat`를 실행합니다.
+6. `KoreanModTranslations\kmt_manager.bat`를 실행하고 `자동 설치/보정`을 누릅니다.
 7. 게임 런처에서 `Korean Mod Translations`를 활성화합니다.
+
+기존 BAT 방식이 필요하면 `KoreanModTranslations\install_mod_translations.bat`를 직접 실행할 수 있습니다.
+
+## KMT Manager
+
+이번 릴리즈에는 사용자 친화적인 로컬 GUI 매니저가 포함됩니다.
+
+- 실행 파일: `KoreanModTranslations\kmt_manager.bat`
+- Starsector 폴더 선택
+- 감지된 원본 모드 수와 core/API JAR 상태 표시
+- AoTD Theory API JAR 자동 동기화
+- 지원 모드 번역 설치/보정
+- 크래시 진단 및 수리 실행
+- 원복/삭제 실행
+- 리포트 폴더 열기
 
 Ashes of The Domain - Theory of Toolbox는 `0.98a\starfarer.api.jar`를 core API JAR 기준으로 요구합니다. KMT installer는 AoTD Theory가 설치되어 있고 두 API JAR이 서로 다르면 AoTD API JAR을 `starsector-core\starfarer.api.jar`에 먼저 동기화한 뒤, KMT JAR 번역 패치를 다시 적용합니다.
 
@@ -35,7 +50,7 @@ Ashes of The Domain - Theory of Toolbox는 `0.98a\starfarer.api.jar`를 core API
 2. 원본 유저 모드 설치
 3. Starsector API JAR 또는 core JAR을 덮어쓰는 다른 모드/패치 적용
 4. 기본 한국어 패치 BAT 실행 또는 재실행
-5. `KoreanModTranslations\install_mod_translations.bat`를 마지막에 실행
+5. `KoreanModTranslations\kmt_manager.bat`에서 `자동 설치/보정` 실행
 
 AoTD Theory의 `0.98a\starfarer.api.jar` 요구사항은 5단계에서 installer가 자동으로 보정합니다.
 
@@ -64,6 +79,8 @@ AoTD Theory의 `0.98a\starfarer.api.jar` 요구사항은 5단계에서 installer
 ```bat
 KoreanModTranslations\diagnose_crash_and_repair.bat
 ```
+
+GUI를 쓰는 경우 `KoreanModTranslations\kmt_manager.bat`에서 `크래시 진단` 또는 `크래시 수리 실행`을 누르면 됩니다.
 
 기본 실행은 최신 `starsector.log`를 읽고 진단 리포트만 작성합니다. 실제 수리까지 적용하려면 명령 프롬프트에서 다음처럼 실행하세요.
 
