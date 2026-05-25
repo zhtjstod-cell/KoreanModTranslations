@@ -67,6 +67,7 @@ diagnose_crash_and_repair.bat --execute
 
 - Java `StringConcatException` / `BootstrapMethodError`: JAR 문자열 결합 recipe의 `\x01` 개수 불일치 수리
 - `AoTD Theory of Toolbox: Market Test Failed`: AoTD `0.98a\starfarer.api.jar`를 core API JAR 기준으로 동기화한 뒤 설치기 재실행
+- `Duplicate key ... rules.csv`: KMT가 백업한 `rules.csv`를 복구한 뒤 현재 installer로 재설치
 - `NumberFormatException`: `rules.csv` options 필드의 잘못된 literal `\n` 수리
 - `RuleException: unmatched quote`: `rules.csv` 구조 컬럼 복구
 
