@@ -1,4 +1,4 @@
-# Korean Mod Translations v0.1.0-alpha
+﻿# Korean Mod Translations v0.1.0-alpha
 
 Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 
@@ -7,7 +7,7 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 - Nexerelin
 - Ashes of The Domain 계열
 - Arma Armatura
-- Cryo But Better 일부
+- Ashes of The Domain - Dreams of Past
 
 설치된 모드만 감지해 적용합니다. 하나만 설치되어 있으면 해당 모드만 번역되고, 여러 개가 있으면 설치된 모드들에 대해 번역이 적용됩니다.
 
@@ -31,3 +31,4 @@ Ashes of The Domain은 기본 한국어 패치와 마찬가지로 Starsector API
 - 번역 누락이나 어색한 문장이 남아 있을 수 있습니다.
 - 원본 모드 버전이 달라지면 일부 문자열은 적용되지 않을 수 있습니다.
 - 원본 모드 파일은 포함하지 않습니다. 원본 모드는 별도로 설치해야 합니다.
+
