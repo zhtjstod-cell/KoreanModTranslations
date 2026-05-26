@@ -1,4 +1,4 @@
-# Korean Mod Translations v0.1.0-alpha
+# Korean Mod Translations v0.1.1-alpha
 
 Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 
@@ -71,3 +71,12 @@ diagnose_crash_and_repair.bat --execute
 - 알파 버전이므로 새 세이브보다 테스트 세이브에서 먼저 확인하는 것을 권장합니다.
 - 원본 모드 버전이 바뀌면 일부 번역은 적용되지 않을 수 있습니다.
 - 번역 패치는 원본 모드를 포함하지 않습니다. 각 원본 모드는 따로 설치해야 합니다.
+## AoTD 활성화 진단
+
+AoTD 콘텐츠가 일부 바닐라처럼 보이거나 `D` 키 연구 탭이 제대로 나오지 않으면 다음 파일을 실행하세요.
+
+```bat
+KoreanModTranslations\audit_aotd_activation.bat
+```
+
+이 진단은 AoTD 5개 모듈, 필수 의존성, AoTD Theory API 병합 상태, 최신 로그의 연구 매니저 로드 흔적을 확인하고 `reports\aotd_activation_audit.json` 및 `reports\aotd_activation_audit_ko.md`를 생성합니다.
