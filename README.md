@@ -1,4 +1,4 @@
-# Korean Mod Translations v0.1.1-alpha
+# Korean Mod Translations v0.1.2-alpha
 
 Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 
@@ -24,6 +24,8 @@ Starsector 한국어 패치용 유저 모드 번역 보조 패치입니다.
 5. 이 폴더 `KoreanModTranslations`를 Starsector의 `mods` 폴더에 넣습니다.
 6. `install_mod_translations.bat`를 실행합니다.
 7. 게임 런처에서 `Korean Mod Translations`를 활성화합니다.
+
+Python 3이 필요합니다. 설치/제거/진단 BAT는 Windows Python Launcher인 `py -3`을 먼저 사용하고, 없을 때만 실제 Python 3 `python` 명령을 확인합니다. `python --version`이 버전 없이 `Python`만 출력되는 환경에서도 `py` 런처가 있으면 그대로 실행됩니다.
 
 ## 다른 Core/JAR 패치와 같이 쓰는 법
 
